@@ -1,0 +1,66 @@
+/* Style for body */
+body {
+    font-family:Arial;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+/* Style for buttons */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for inputs */
+input[type="text"] {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+/* Style for table */
+table {
+    margin: 20px auto; 
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    text-align: right;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style for item */
+.item img {
+    max-width:320px;
+    height: auto; 
+    margin-bottom: 50px;
+   
+}
+
+.item h5, .item p {
+    margin: 5px 0;
+}
+
+/* Style for price */
+.item p {
+    font-weight: bold;
+    color: #007bff; 
+}
+
+
+
