@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": "f1ad",
+      "username": "Priyadharshini",
+      "password": "1234",
+      "mobile": "8778908100",
+      "email": "plpriyadharshini03@gmail.com",
+      "pass": "priya73"
+    },
+    {
+      "id": "eb1b",
+      "username": "sowmi",
+      "password": "543",
+      "mobile": "24859506950",
+      "email": "sow@gmail.com"
+    },
+    {
+      "id": "cbbc",
+      "username": "manju",
+      "password": "456",
+      "mobile": "1434658679",
+      "email": "manju@gmail.com"
+    },
+    {
+      "id": "0abd",
+      "username": "oviya",
+      "password": "748",
+      "mobile": "9366426606",
+      "email": "ovi@gmail.com"
+    }
+  ]
+}
