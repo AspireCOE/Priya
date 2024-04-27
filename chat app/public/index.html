@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat Application</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="title">Chat💬</h1>
+        <div class="main">
+            <div class="name">
+                <span>👤</span>
+                <input type="text" id="name-input" class="name-input" value="anonymous" maxlength="20"/>
+            </div>
+            <ul class="message-container" id="message-container">
+                <li class="message-left">
+                    <p class="message">
+                        loreum impsun
+                        <span>bluebird ● 26 Apr 16:23</span>
+                    </p>
+                </li>
+                <li class="message-right">
+                    <p class="message">
+                        loreum impsun
+                        <span>bluebird ● 26 Apr 16:23</span>
+                    </p>
+                </li>
+                <li class="message-feedback">
+                    <p class="feedback" id="feedback">
+                        killer is typing a message
+                    </p>
+                </li>
+            </ul>
+            <form class="message-form" id="message-form">
+                <input type="text" name="message" id="message-input" class="message-input">
+                <div class="v-divider"></div>
+                <button type="submit" class="send-button">Send ➤</button>
+            </form>
+        </div>
+        <h3 class="clients-total" id="clients-total">Total clients: 2</h3>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
