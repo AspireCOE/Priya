@@ -1,0 +1,37 @@
+<p>account-holder works!</p>
+choose accountType:<select [(ngModel)]="accountTypeInput">
+    <option>Savings</option>
+    <option>Checking</option>
+    <option>Bussiness</option>
+    <option>Salary</option>
+</select>
+<table>
+    <thead>
+        <tr>
+            <th>accountNumber</th>
+            <th>acHolderName</th>
+            <th>accountType</th>
+            <th>amount</th>
+            <th>date</th>
+            <th>status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (accountHolder of accountHolders;track accountHolder){
+            <tr>
+                @if (accountHolder.accountType==accountTypeInput){
+                <td>{{accountHolder.accountNumber}}</td>
+                <td>{{accountHolder.acHolderName}}</td>
+                <td>{{accountHolder.accountType}}</td>
+                <td>{{accountHolder.amount}}</td>
+                <td>{{accountHolder.date}}</td>
+                <td [ngSwitch]="true">
+                    <span *ngSwitchCase="accountHolder.amount >= 10000">Loyal</span>
+                    <span *ngSwitchCase="accountHolder.amount >= 1000 && accountHolder.amount < 10000">active</span>
+                    <span *ngSwitchCase="accountHolder.amount < 1000">inactive</span>
+                </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
