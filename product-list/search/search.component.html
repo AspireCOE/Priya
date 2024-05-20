@@ -1,0 +1,3 @@
+<input [(ngModel)]="searchText">
+<button [ngClass]="{'btn-search':searchText,'btn-search-disabled':!searchText}" [disabled]="!searchText">Search</button>
+<p><strong>Search result for:</strong>{{searchText}}</p>

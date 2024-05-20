@@ -1,0 +1,18 @@
+<p>product-list works!</p>
+<img [src]="product.image">
+
+<p>productName:{{product.name}}</p>
+<p>price:{{product.price}}</p>
+<p>color:{{product.color}}</p>
+<p>discountedPrice:{{getDiscountedPrice()}}</p>
+<p>{{product.inStock>0?"only "+product.inStock+" items left":"not in stock"}}</p>
+
+
+<button [disabled]="!(product.inStock>0)">Buy Now</button><br><br>
+<button [style.margin.px]="5" (click)="decrement()">-</button>
+<span>{{addToCart}}</span>
+<button [style.margin.px]="5" (click)="increment()">+</button><br><br>
+<input (input)="onNameChange($event)">
+<p>name:{{name}}</p>
+<div [ngStyle]="{'font-weight':'bold',color:product.inStock>0?'Green':'red'}">{{product.inStock>0?'Available in Stock':'Not Available in Stock'}}</div><br><br>
+<app-search></app-search>

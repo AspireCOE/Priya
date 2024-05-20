@@ -1,0 +1,12 @@
+.btn-search {
+    background-color: #282828;
+    margin-left: 0px;
+    color: #fff;
+  }
+  .btn-search-disabled {
+    background-color: #aaa;
+    margin-left: -1px;
+    color: #999;
+    border: #aaa 1px solid;
+    cursor: not-allowed no-drop;
+  }
