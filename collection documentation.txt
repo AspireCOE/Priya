@@ -1,0 +1,115 @@
+1.what is collection?
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+
+2. what is framework?
+It provides readymade architecture.
+It represents a set of classes and interfaces.
+It is optional.
+
+3. what is collection framework?
+The Collection framework represents a unified architecture for storing and manipulating a group of objects. It has:
+
+Interfaces and its implementations, i.e., classes
+Algorithm
+
+4. Interfaces:
+List: Ordered collection (can contain duplicates).
+Set: Unordered collection (no duplicates).
+Queue: Collection that orders elements in a FIFO manner.
+Map: Collection of key-value pairs (no duplicate keys).
+
+5. List example:
+ import java.util.ArrayList;
+import java.util.List;
+
+public class ListExample {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        System.out.println(list); // Output: [Apple, Banana, Cherry]
+    }
+}
+
+6. Stack
+ import java.util.HashSet;
+import java.util.Set;
+
+public class SetExample {
+    public static void main(String[] args) {
+        Set<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Apple"); // Duplicate, will not be added
+
+        System.out.println(set); // Output: [Banana, Apple]
+    }
+}
+
+7. Queue
+ import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Apple");
+        queue.add("Banana");
+        queue.add("Cherry");
+
+        System.out.println(queue.poll()); // Output: Apple
+        System.out.println(queue); // Output: [Banana, Cherry]
+    }
+}
+
+8. Map
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapExample {
+    public static void main(String[] args) {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("Apple", 1);
+        map.put("Banana", 2);
+        map.put("Cherry", 3);
+
+        System.out.println(map); // Output: {Apple=1, Banana=2, Cherry=3}
+    }
+}
+
+9. Stack
+  import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<>();
+        stack.push("Apple");
+        stack.push("Banana");
+        stack.push("Cherry");
+
+        System.out.println(stack.pop()); // Output: Cherry
+        System.out.println(stack); // Output: [Apple, Banana]
+    }
+}
+
+10. Iterator
+  import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class IteratorExample {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+}
+
