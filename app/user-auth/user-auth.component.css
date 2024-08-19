@@ -1,0 +1,21 @@
+.user-auth h1{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    color: purple;  
+    text-align: center; 
+}
+
+.user-auth {
+    margin-bottom: 100px;
+}
+.user-auth a{
+    color: purple;
+    cursor: pointer;
+}
+.form-button{
+    color:white;
+    background-color: purple;
+}
+input{
+    border-color: purple;
+}
