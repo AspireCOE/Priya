@@ -1,0 +1,65 @@
+Exception
+
+It is used to handle exception in program i.e. if any exception occurs, without interrupting a program in-between will successfully execute the program.
+
+Types
+ 1. checked - checked at compile time - IOException,FileNotFoundException
+ 2. Unchecked -checked at runtime - IndexoutofBound, NullPointer, NumberFormatException,ArithmeticException
+
+Keyword
+1.Try-Catch Block: Used to catch exceptions and handle them gracefully.
+2.Finally Block: Used to execute code regardless of whether an exception is thrown or not.
+3.Throw: Used to explicitly throw an exception.
+4.Throws: Used in method signatures to declare that a method might throw an exception. 
+
+Example for checked:
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class CheckedExceptionExample {
+    public static void main(String[] args) {
+        try {
+            FileReader file = new FileReader("nonexistentfile.txt");
+        } catch (IOException e) {
+            System.out.println("Caught IOException: " + e.getMessage());
+        }
+    }
+}
+
+Example for unchecked:
+ public class UncheckedExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // This will throw ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Caught ArithmeticException: " + e.getMessage());
+        }
+    }
+}
+
+All Keywords example:
+
+public class ExceptionKeywordsExample {
+    public static void main(String[] args) {
+        try {
+            // Code that might throw an exception
+            riskyMethod();
+        } catch (IOException e) {
+            // Handle checked exception
+            System.out.println("Caught IOException: " + e.getMessage());
+        } catch (ArithmeticException e) {
+            // Handle unchecked exception
+            System.out.println("Caught ArithmeticException: " + e.getMessage());
+        } finally {
+            // Code that will always execute
+            System.out.println("Finally block executed.");
+        }
+    }
+
+    // Method that throws a checked exception
+    static void riskyMethod() throws IOException {
+        // Code that might throw an IOException
+        throw new IOException("This is a checked exception");
+    }
+}
